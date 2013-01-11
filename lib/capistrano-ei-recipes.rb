@@ -5,6 +5,7 @@ require 'capistrano-ei-recipes/bundler'
 require 'capistrano-ei-recipes/deploy'
 require 'capistrano-ei-recipes/dragonfly'
 require 'capistrano-ei-recipes/rails'
+require 'capistrano-ei-recipes/assets'
 require 'capistrano-ei-recipes/unicorn'
 
 unless Capistrano::Configuration.respond_to?(:instance)
