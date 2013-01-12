@@ -1,5 +1,6 @@
 require 'capistrano-ei-recipes/version'
 require 'bundler/capistrano'
+require 'capistrano-db-tasks'
 require 'capistrano-ei-recipes/helpers'
 require 'capistrano-ei-recipes/bundler'
 require 'capistrano-ei-recipes/deploy'
@@ -52,4 +53,7 @@ Capistrano::Configuration.instance.load do
   # Git settings for Capistrano
   default_run_options[:pty]     = true # needed for git password prompts
   ssh_options[:forward_agent]   = true # use the keys for the person running the cap command to check out the app
+
+  # DB syncing
+  set :db_local_clean, true
 end
