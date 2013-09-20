@@ -29,6 +29,7 @@ Capistrano::Configuration.instance.load do
   set(:application)     { abort "Please specify the name of your application, set :application, 'foo'" }
   set(:runner)          { user }
   set :use_sudo,         false
+  set :bundle_dir,       nil
   set :bundle_without,   [:darwin, :development, :test]
   set :rake,             'bundle exec rake'
   set(:current_path)     { File.join(deploy_to, current_dir) }
